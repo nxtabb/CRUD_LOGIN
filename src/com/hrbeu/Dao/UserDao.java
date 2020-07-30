@@ -31,4 +31,18 @@ public class UserDao {
         return password;
     }
 
+    public void register(String username,String password){
+        connection = DBUtil.getConnection();
+        String sql = "insert into user(username,password) values (?,?)";
+        try {
+            preparedStatement = connection.prepareStatement(sql);
+            preparedStatement.setString(1,username);
+            preparedStatement.setString(2,password);
+            preparedStatement.executeUpdate();
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+        DBUtil.realease(connection,preparedStatement,resultSet);
+    }
+
 }

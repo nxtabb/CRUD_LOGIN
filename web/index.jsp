@@ -99,7 +99,8 @@
       </select></td>
     </tr>
     <tr>
-      <td colspan="2" align="center"><input type="button" value="登录" style="width: 100px" id="btn"></td>
+      <td ><input type="button" value="登录" style="width: 100px" id="btn"></td>
+      <td><a href="/register.jsp">注册</a></td>
     </tr>
   </table>
   </form>
