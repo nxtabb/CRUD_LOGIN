@@ -12,6 +12,7 @@
 </head>
 <body>
 <div align="center">
+    //判断是否登陆了
     <%  String username = (String)session.getAttribute("username");
         if(username==null||username.equals("")){
             request.setAttribute("error1","请登录");
