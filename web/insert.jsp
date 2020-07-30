@@ -12,6 +12,12 @@
 </head>
 <body>
 <div align="center">
+    <%  String username = (String)session.getAttribute("username");
+        if(username==null||username.equals("")){
+            request.setAttribute("error1","请登录");
+            request.getRequestDispatcher("index.jsp").forward(request,response);
+        }
+        %>
 <form action="/crud" method="post">
     <h1 align="center">插入员工信息</h1>
     <table align="center">
